@@ -1,0 +1,8 @@
+discord.py==0.16.12
+logzero
+numpy
+pandas
+matplotlib
+pillow
+requests
+emoji
