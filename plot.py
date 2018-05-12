@@ -59,6 +59,7 @@ def get_emoji_path(ej):
         file = '-'.join(re.findall(r'\\[uU]0*([^\\]+)', file))
         if not file:
             file = emoji.UNICODE_EMOJI[ej].strip(':')
+            # TODO in this case use custom emoji dir?
         return join(settings.EMOJI_DIR, file + '.png')
     else:
         join(settings.CUSTOM_EMOJI_DIR, emoji + '.png')
@@ -210,11 +211,10 @@ def run(edf):
     # now show or export
     ############################################################################
 
-    interval = settings.ANIMATION_INTERVAL
     anim = mpl.animation.FuncAnimation(fig, animation,
-            frames=frames, repeat=True, repeat_delay=5000, interval=interval)
+            frames=frames, repeat=True, repeat_delay=5000, interval=settings.ANIMATION_INTERVAL)
 
-    if settings.TIGHT_LAYOUT:
+    if settings.TIGHT_LAYOUT is not None:
         fig.tight_layout(**settings.TIGHT_LAYOUT)
     fig.subplots_adjust(**settings.SUBPLOT_ADJUST)
 
@@ -307,7 +307,7 @@ def main():
     try:
         with open(cached_db, 'rb') as f:
             edf = pickle.load(f)
-    except FileNotFoundError:
+    except FileNotFoundError: # TODO invalidate cache in case of any other exception?
         print('==> loading in the dataset')
         df = pd.read_csv(settings.DATASET)
         df.columns = ['Timestamp', 'Text']
@@ -324,7 +324,7 @@ def main():
         with open(cached_db, 'wb') as f:
             pickle.dump(edf, f)
 
-    assert edf.shape[0], 'no emoji found in the dataset'
+    assert edf.shape[0], 'no emoji found in the dataset' # TODO raise before caching?
 
     run(edf)
 
