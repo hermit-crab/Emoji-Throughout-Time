@@ -24,13 +24,13 @@ ROLLING_WINDOW_SHIFT = 60 * 60 * 24 * 1 # 1 day
 LAX_SORT = True
 
 # should top emote stay the same size (0) or scale relative to
-# itself size since before last N frames?
+# itself from before last N frames?
 HEAD_RELATIVITY = 3
 
 # None to just show the animation using default matplolib interface
 # 'png' to export raw files into OUTPUT_DIR
 # anything else will be treated as a desired file extension (e.g. 'mp4')
-# matplotlib has to be configured for any video formats to work
+# (matplotlib has to be configured properly for any video formats to work)
 EXPORT_FORMAT = None
 
 # animation config, will have no effect with 'png' export
