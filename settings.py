@@ -1,14 +1,14 @@
 import matplotlib as mpl
-import os
+from os.path import join, dirname
 
 import emoji
 
 
-BASEDIR = os.path.dirname(__file__)
+BASEDIR = dirname(__file__)
 
-EMOJI_DIR = os.path.join(BASEDIR, 'emoji')
-CUSTOM_EMOJI_DIR = os.path.join(BASEDIR, 'custom_emoji')
-OUTPUT_DIR = os.path.join(BASEDIR, 'out')
+EMOJI_DIR = join(BASEDIR, 'emoji')
+CUSTOM_EMOJI_DIR = join(BASEDIR, 'custom_emoji')
+OUTPUT_DIR = join(BASEDIR, 'out')
 
 # csv file without a header of format: timestamp,text
 # timestamp is a standard utc timestamp (e.g. 1526007950)
