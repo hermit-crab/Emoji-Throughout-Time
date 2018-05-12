@@ -1,4 +1,4 @@
-# Emoji Throughout Time ![img](https://i.imgur.com/VgfbRA6.png)
+# Emoji Throughout Time ![img](https://i.imgur.com/m3uZGO3.png)
 Visualisation from [this](https://www.reddit.com/r/dataisbeautiful/comments/8icg5x/personal_usage_of_emoji_animated_over_time_oc/) reddit /r/dataisbeautiful post.
 
 ![img](https://i.imgur.com/OHhPC1u.gif)
