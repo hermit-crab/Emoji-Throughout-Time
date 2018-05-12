@@ -23,7 +23,7 @@ Timestamp is a standard UTC timestamp. Script will scan over all records for emo
 `<:emoji-name:optional-filesystem-path-or-url>`  
 Custom emoji that don't have a path or url associated must be placed into `custom_emoji` directory as png images.
 
-## Working with discord logs:
+## Working with discord logs
 To extract and work over discord logs run the following commands (use -h key for help):
 ```bash
 > python ./discord-extract/cli.py
