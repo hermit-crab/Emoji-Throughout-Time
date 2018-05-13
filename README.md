@@ -13,7 +13,7 @@ Install dependencies using `pip install -r requirements.txt` or manually.
 
 ## Run
 Specify any required options inside `settings.py` and run `> python ./plot.py`.  
-Dataset file is assumed to have the fallowing csv structure:
+Dataset file is assumed to have the following csv structure:
 ```csv
 timestamp,text
 timestamp,text
@@ -30,3 +30,6 @@ To extract and work over discord logs run the following commands (use -h key for
 # and after you have created a chatlog database run:
 > python ./discord-convert.py path-to-database [optional-user-id] > posts.csv
 ```
+
+## Todo
+* Mark top dogs as events (small greyscale images) on the background line graph.
