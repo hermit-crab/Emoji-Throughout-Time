@@ -256,7 +256,7 @@ def count_fmt(n, i, ref_level):
 def lax_cmp(a, b):
     (_, freq_a), (_, freq_b) = a, b
 
-    if freq_a/freq_b > .88:
+    if freq_a/freq_b > .88: # TODO this dont look right
         return 0
     elif freq_a < freq_b:
         return -1
