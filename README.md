@@ -13,7 +13,7 @@ Install dependencies using `pip install -r requirements.txt` or manually.
 
 ## Run
 Specify any required options inside `settings.py` and run `> python ./plot.py`.  
-Dataset file is assumed to have the following csv structure:
+Dataset file is assumed to have the following CSV structure:
 ```csv
 timestamp,text
 timestamp,text
@@ -23,13 +23,5 @@ Timestamp is a standard UTC timestamp. Script will scan over all records for emo
 `<:emoji-name:optional-filesystem-path-or-url>`  
 Custom emoji that don't have a path or url associated must be placed into `custom_emoji` directory as png images.
 
-## Working with discord logs
-To extract and work over discord logs run the following commands (use -h key for help):
-```bash
-> python ./discord-extract/cli.py
-# and after you have created a chatlog database run:
-> python ./discord-convert.py path-to-database [optional-user-id] > posts.csv
-```
-
-## Todo
-* Mark top dogs as events (small greyscale images) on the background line graph.
+## Working with discord logs and custom emojis
+Previously I had a custom archiver script for discord but it has stopped working after the myriad of changes in discord API and the library I was using to access it. You can try your luck with https://github.com/Tyrrrz/DiscordChatExporter.
